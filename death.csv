@@ -1,0 +1,223 @@
+COUNTRY,DEATHS (THOUSANDS),CODE
+Afghanistan,30.9,AFG
+Albania,5.4,ALB
+Algeria,14.7,DZA
+American Samoa,0.75,ASM
+Andorra,4.8,AND
+Angola,7.6,AGO
+Anguilla,0.18,AIA
+Antigua and Barbuda,1.24,ATG
+Argentina,36.4,ARG
+Armenia,10.88,ARM
+Aruba,2.52,ABW
+Australia,24.9,AUS
+Austria,14.6,AUT
+Azerbaijan,16.3,AZE
+Bahamas,0.1,BHM
+Bahrain,0.2,BHR
+Bangladesh,163.4,BGD
+Barbados,0.2,BRB
+Belarus,56.1,BLR
+Belgium,13.9,BEL
+Belize,1.67,BLZ
+Benin,4.1,BEN
+Bermuda,5.2,BMU
+Bhutan,2.09,BTN
+Bolivia,34.08,BOL
+Bosnia and Herzegovina,5.5,BIH
+Botswana,0.8,BWA
+Brazil,133.9,BRA
+British Virgin Islands,1.1,VGB
+Brunei,0.1,BRN
+Bulgaria,23.1,BGR
+Burkina Faso,13.38,BFA
+Burma,65.29,MMR
+Burundi,3.04,BDI
+Cabo Verde,1.98,CPV
+Cambodia,16.9,KHM
+Cameroon,32.16,CMR
+Canada,42,CAN
+Cayman Islands,2.25,CYM
+Central African Republic,1.73,CAF
+Chad,15.84,TCD
+Chile,9.8,CHL
+China,1040,CHN
+Colombia,27.7,COL
+Comoros,0.72,COM
+Congo,32.67,COD
+Congo,14.11,COG
+Cook Islands,0.18,COK
+Costa Rica,50.46,CRI
+Cote d'Ivoire,33.96,CIV
+Croatia,12.3,HRV
+Cuba,77.15,CUB
+Curacao,5.6,CUW
+Cyprus,1,CYP
+Czech Republic,28.5,CZE
+Denmark,6.7,DNK
+Djibouti,1.58,DJI
+Dominica,0.51,DMA
+Dominican Republic,64.05,DOM
+Ecuador,100.5,ECU
+Egypt,284.9,EGY
+El Salvador,25.14,SLV
+Equatorial Guinea,0.4,GNQ
+Eritrea,3.87,ERI
+Estonia,4.9,EST
+Ethiopia,49.86,ETH
+Falkland Islands (Islas Malvinas),0.16,FLK
+Faroe Islands,2.32,FRO
+Fiji,4.17,FJI
+Finland,11.4,FIN
+France,42.6,FRA
+French Polynesia,7.15,PYF
+Gabon,20.68,GAB
+Gambia,0.92,GMB
+Georgia,16.13,GEO
+Germany,155.8,DEU
+Ghana,35.48,GHA
+Gibraltar,1.85,GIB
+Greece,13.1,GRC
+Greenland,2.16,GRL
+Grenada,0.84,GRD
+Guam,4.6,GUM
+Guatemala,58.3,GTM
+Guernsey,2.74,GGY
+Guinea-Bissau,1.04,GNB
+Guinea,6.77,GIN
+Guyana,3.14,GUY
+Haiti,8.92,HTI
+Honduras,19.37,HND
+Hong Kong,292.7,HKG
+Hungary,33.6,HUN
+Iceland,0.4,ISL
+India,1800,IND
+Indonesia,242.7,IDN
+Iran,402.7,IRN
+Iraq,232.2,IRQ
+Ireland,5.3,IRL
+Isle of Man,4.08,IMN
+Israel,4.7,ISR
+Italy,87.8,ITA
+Jamaica,13.92,JAM
+Japan,105.5,JPN
+Jersey,5.77,JEY
+Jordan,36.55,JOR
+Kazakhstan,225.6,KAZ
+Kenya,62.72,KEN
+Kiribati,0.16,KIR
+Korea North,20.5,PRK
+Korea South,20.5,KOR
+Kosovo,5.99,KSV
+Kuwait,1.2,KWT
+Kyrgyzstan,7.65,KGZ
+Laos,11.71,LAO
+Latvia,32.82,LVA
+Lebanon,47.5,LBN
+Lesotho,2.46,LSO
+Liberia,2.07,LBR
+Libya,49.34,LBY
+Liechtenstein,5.11,LIE
+Lithuania,48.72,LTU
+Luxembourg,0.5,LUX
+Macau,51.68,MAC
+Macedonia,10.92,MKD
+Madagascar,11.19,MDG
+Malawi,4.41,MWI
+Malaysia,22.7,MYS
+Maldives,2.41,MDV
+Mali,12.04,MLI
+Malta,0.7,MLT
+Marshall Islands,0.18,MHL
+Mauritania,4.29,MRT
+Mauritius,12.72,MUS
+Mexico,77,MEX
+Micronesia,0.34,FSM
+Moldova,7.74,MDA
+Monaco,6.06,MCO
+Mongolia,11.73,MNG
+Montenegro,4.66,MNE
+Morocco,112.6,MAR
+Mozambique,16.59,MOZ
+Namibia,13.11,NAM
+Nepal,19.64,NPL
+Netherlands,12.7,NLD
+New Caledonia,11.1,NCL
+New Zealand,5.7,NZL
+Nicaragua,11.85,NIC
+Nigeria,594.3,NGA
+Niger,8.29,NER
+Niue,0.01,NIU
+Northern Mariana Islands,1.23,MNP
+Norway,6,NOR
+Oman,2.2,OMN
+Pakistan,237.5,PAK
+Palau,0.65,PLW
+Panama,44.69,PAN
+Papua New Guinea,16.1,PNG
+Paraguay,31.3,PRY
+Peru,9.2,PER
+Philippines,57.8,PHL
+Poland,79,POL
+Portugal,10.4,PRT
+Puerto Rico,93.52,PRI
+Qatar,0.2,QAT
+Romania,199,ROU
+Russia,670,RUS
+Rwanda,8,RWA
+Saint Kitts and Nevis,0.81,KNA
+Saint Lucia,1.35,LCA
+Saint Martin,0.56,MAF
+Saint Pierre and Miquelon,0.22,SPM
+Saint Vincent and the Grenadines,0.75,VCT
+Samoa,0.83,WSM
+San Marino,1.86,SMR
+Sao Tome and Principe,0.36,STP
+Saudi Arabia,20.9,SAU
+Senegal,15.88,SEN
+Serbia,42.65,SRB
+Seychelles,1.47,SYC
+Sierra Leone,5.41,SLE
+Singapore,4.7,SGP
+Sint Maarten,5,SXM
+Slovakia,18.4,SVK
+Slovenia,2.4,SVN
+Solomon Islands,1.16,SLB
+Somalia,2.37,SOM
+South Africa,341.2,ZAF
+South Sudan,11.89,SSD
+Spain,43.5,ESP
+Sri Lanka,71.57,LKA
+Sudan,70.03,SDN
+Suriname,5.27,SUR
+Swaziland,3.84,SWZ
+Sweden,17,SWE
+Switzerland,9.8,CHE
+Syria,64.7,SYR
+Taiwan,90,TWN
+Tajikistan,9.16,TJK
+Tanzania,36.62,TZA
+Thailand,53,THA
+Timor-Leste,4.51,TLS
+Togo,4.84,TGO
+Tonga,0.49,TON
+Trinidad and Tobago,1.7,TTO
+Tunisia,49.12,TUN
+Turkey,81,TUR
+Turkmenistan,43.5,TKM
+Tuvalu,0.04,TUV
+Uganda,26.09,UGA
+Ukraine,134.9,UKR
+United Arab Emirates,1.2,ARE
+United Kingdom,92.3,GBR
+United States,445.8,USA
+Uruguay,55.6,URY
+Uzbekistan,63.08,UZB
+Vanuatu,0.82,VUT
+Venezuela,209.2,VEN
+Vietnam,9.8,VNM
+Virgin Islands,5.08,VGB
+West Bank,6.64,WBG
+Yemen,45.45,YEM
+Zambia,25.61,ZMB
+Zimbabwe,13.74,ZWE

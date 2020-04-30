@@ -1,0 +1,178 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+ML App
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #fefbd8;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Heart Disease Prediction</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Welcome to Heart Disease Prediction Application</h1>
+        <p class="lead">Use this application as a way to quickly predict the chance of getting Heart Disease. </p>
+      </div>
+      
+   </div><!-- /.container -->
+   
+   
+   <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://www.4nrx.md/blog/wp-content/uploads/2019/05/3f0abf_4c92269072834a74a721581073548258_mv2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.nhlbi.nih.gov/sites/default/files/styles/16x9_crop/public/2017-12/internal_structures_1_0.jpg?h=6c8b8c3d&itok=BNFPxPUV" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://media.istockphoto.com/vectors/symptoms-heart-disease-vector-id520794426?b=1&k=6&m=520794426&s=612x612&h=bX8xYj9KDQgQNu1uQSsKo5pNPGTIRbt3tAOu_OBKfFY=" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://cdn5.vectorstock.com/i/1000x1000/18/44/infographics-symptoms-heart-disease-and-acute-vector-26891844.jpg" style="width:100%">
+</div>
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+<br>
+<div class="container">
+<center>
+<h1>Heart Disease</h1>
+<br>
+<br>
+<p align="justify">Heart disease describes a range of conditions that affect your heart. 
+Diseases under the heart disease umbrella include blood vessel diseases, such as coronary 
+artery disease; heart rhythm problems (arrhythmias); and heart defects 
+you're born with (congenital heart defects), among others.</p>
+<br>
+<br>
+<p align="justify">The term "heart disease" is often used interchangeably with the term 
+"cardiovascular disease." Cardiovascular disease generally refers to conditions that involve 
+narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke. 
+Other heart conditions, such as those that affect your heart's muscle, valves or rhythm, also are 
+considered forms of heart disease.</p>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+{% endblock %}

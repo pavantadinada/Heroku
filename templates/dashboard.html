@@ -1,0 +1,188 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #fefbd8;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Heart Disease Prediction</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+            <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+            <input type="text" class="form-control" name="q" placeholder="Search...">
+            
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('dataset') }}">DataSet</a></li>
+            <li><a href="{{ url_for('userinput') }}">Predict</a></li>
+            <li><a href="{{ url_for('graphs')}}">Analytics</a></li>
+             <li><a href="{{ url_for('display')}}">Exploratory Data Analysis (EDA)</a></li>
+              <li><a href="{{ url_for('visuval')}}">Heart Disease Deaths</a></li>
+            
+          </ul>
+          <ul class="nav nav-sidebar">
+           
+            <li><a href="{{ url_for('detect') }}">Type of Heart Disease Detection</a></li>
+            <li><a href="{{ url_for('concept') }}">Literature of Heart Disease</a></li>
+            <li><a href="{{ url_for('sp') }}">Suggestions</a></li>
+          </ul>
+         
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Welcome, {{ name }}</h1>
+
+          <div class="row placeholders">
+          <center>
+
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('dataset') }}"><img src="https://www.freeiconspng.com/uploads/sql-server-icon-png-27.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('dataset') }}">Data Set</a></h4>
+              <span class="text-muted">The Details of Heart Dataset</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('userinput') }}"><img src="https://cdn5.vectorstock.com/i/1000x1000/48/99/user-prediction-icon-monochrome-style-design-from-vector-23844899.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('userinput') }}">Predict</a></h4>
+              <span class="text-muted">Predict the Heart Disease</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('graphs')}}"><img src="https://cdn3.vectorstock.com/i/1000x1000/85/42/wave-analytics-logo-vector-13858542.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('graphs')}}">Analytics</a></h4>
+              <span class="text-muted">Data Visualizations</span>
+            </div><br>
+            <div class="col-xs-6 col-sm-3 placeholder">
+             <a href="{{ url_for('display') }}"><img src="https://image.flaticon.com/icons/svg/1998/1998557.svg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('display') }}">EDA</a></h4>
+              <span class="text-muted">Exploratory Data Analysis (EDA)</span>
+            </div>
+            
+
+             
+            </center>
+           
+          </div>
+          <br>
+          <br>
+          <div class="row placeholders">
+          <center>
+          <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('visuval')}}"><img src="https://cdn5.vectorstock.com/i/1000x1000/18/14/coronary-artery-disease-icon-vector-17791814.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('visuval')}}">Heart Disease Deaths</a></h4>
+              <span class="text-muted">Heart Disease Deaths Choropleth Map</span>
+            </div>
+          <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('detect') }}"><img src="https://cdn1.iconfinder.com/data/icons/medical-health-care-2-2/380/Symptom_Checker-512.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('detect') }}">Disease Detection</a></h4>
+              <span class="text-muted">Detect Type of Heart Disease</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('concept') }}"><img src="https://pngimage.net/wp-content/uploads/2018/06/subject-png-2.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"><a>
+              <h4><a href="{{ url_for('concept') }}">Literature of Heart Disease</a></h4>
+              <span class="text-muted">Different Concepts Of Heart Disease</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="{{ url_for('sp') }}"><img src="https://lh3.googleusercontent.com/proxy/HwupLs9pV3jMRVE6DkyJn7QnUVhYxBcwae2nvRBwnsxPwvDu-2oUaXgB6xkdOGXMWPWy0bQV71YA5Vwd3qQeciwj4AvD1-5JcJ07wxao9z2jKsVHS_2kWOdKvhU" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <h4><a href="{{ url_for('sp') }}">Suggestions</a></h4>
+              <span class="text-muted">Suggestions & Precautions</span>
+            </div>
+            
+          
+            
+            
+            </center>
+           
+          </div>
+          
+          
+          <br>
+          <br>
+
+          <h2 class="sub-header">Top 5 Cardiology Hospitals Across Globe</h2>
+          <br>
+          
+          <div class="table-responsive">
+            <table align="center" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Hospital Name</th>
+                  <th>Rank</th>
+                  <th>Location</th>
+                  <th>Website Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Nyu Hospitals Center</td>
+                  <td>1</td>
+                  <td>New York</td>
+                  <td><a href="https://nyulangone.org/doctors/specialty/cardiologist?page=1&user-interaction=true&sort=availability&pageSize=20">Click Here</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mayo Clinic Rochester</td>
+                  <td>2</td>
+                  <td>Rochester</td>
+                  <td><a href="https://www.mayoclinic.org/departments-centers/cardiovascular-medicine/home/orc-20121930">Click Here</a></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Cleveland Clinic</td>
+                  <td>3</td>
+                  <td>Cleveland</td>
+                  <td><a href="https://my.clevelandclinic.org/departments/heart">Click Here</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Glendale Adventist Medical Center</td>
+                  <td>4</td>
+                  <td>Glendale</td>
+                  <td><a href="https://www.adventisthealth.org/glendale/services/heart-care/">Click Here</a></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Massachusetts General Hospital</td>
+                  <td>5</td>
+                  <td>Boston</td>
+                  <td><a href="https://www.massgeneral.org/medicine/cardiology">Click Here</a></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}

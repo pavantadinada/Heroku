@@ -1,0 +1,203 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+ML API
+{% endblock %}
+
+
+{% block styles %}
+{{super()}}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text]{
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #D6DBDF;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+
+{% endblock %}
+
+  
+  
+  
+  
+{% block content %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #fefbd8;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Heart Disease Prediction</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+           
+            <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+            <input type="text" class="form-control" name="q" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="{{ url_for('dashboard') }}">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('dataset') }}">DataSet</a></li>
+            <li class="active"><a href="{{ url_for('userinput') }}">Predict</a></li>
+            <li><a href="{{ url_for('graphs') }}">Analytics</a></li>
+            <li><a href="{{ url_for('display')}}">Exploratory Data Analysis (EDA)</a></li>
+              <li><a href="{{ url_for('visuval')}}">Heart Disease Deaths</a></li>
+            
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="{{ url_for('detect') }}">Type of Heart Disease Detection</a></li>
+            <li><a href="{{ url_for('concept') }}">Literature of Heart Disease</a></li>
+            <li><a href="{{ url_for('sp') }}">Suggestions</a></li>
+          </ul>
+          
+        </div>
+
+ <div class="row placeholders">
+ <div class="login">
+	<center><h1>Please fill the below form to know <br>the chance of getting Heart Disease</h1></center>
+        <br>
+        <br>
+     <!-- Main Input For Receiving Query to our ML -->
+     <div class="container">
+     <center>
+    <form action="{{ url_for('predict')}}"method="post">
+    
+    
+
+   
+    	<input type="text" name="age" placeholder="Age" required="required"><br><br>
+    	
+    	<!--<select name = "dropdown">-->
+           <!-- <option value = "0">Female</option>-->
+            <!--<option value = "1">Male</option>-->
+         <!--</select><br><br>-->
+         
+         
+        <input type="text" name="sex" placeholder="Sex" required="required"><br><br>
+		<input type="text" name="cp" placeholder="Chest Pain Type" required="required"><br><br>
+		<input type="text" name="trestbps" placeholder="Resting Blood Pressure" required="required"><br><br>
+        <input type="text" name="chol" placeholder="Serum Cholestoral" required="required"><br><br>
+		<input type="text" name="fbs" placeholder="Fasting Blood Sugar" required="required"><br><br>
+		<input type="text" name="restecg" placeholder="Resting ECG" required="required"><br><br>
+        <input type="text" name="thalach" placeholder="Maximun Heart Rate" required="required"><br><br>
+		<input type="text" name="exang" placeholder="Exercise Induced Angina" required="required"><br><br>
+		<input type="text" name="oldpeak" placeholder="Depression" required="required"><br><br>
+        <input type="text" name="slope" placeholder="Peak Exercise" required="required"><br><br>
+		<input type="text" name="ca" placeholder="Number of Vessels" required="required"><br><br>
+		<input type="text" name="thal" placeholder="Defect" required="required"><br><br>
+		<br>
+		<br>
+
+        <button type="submit" class="block">Predict</button>
+    </form>
+    </center> 
+    </div>
+
+   <br>
+   <br>
+   <center><h1>{{ prediction_text }}</h1>
+   <br>
+   <br>
+   
+  
+
+   
+   
+   <br>
+   <center>
+   <!--{{ world_viz }}-->
+  <!-- <li><a href="/world_viz">Results</a></li>-->
+   <!--<img src="/world_viz/" alt="World Heart Deaths"> -->
+   
+   
+   
+   
+
+ </div>
+ </div>
+
+{% endblock %}
+
