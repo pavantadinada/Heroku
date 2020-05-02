@@ -24,13 +24,13 @@ Dashboard
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
-            
+
             <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           </ul>
           <form class="navbar-form navbar-right" action="https://www.google.com/search" method="GET">
             <input type="text" class="form-control" name="q" placeholder="Search...">
-            
+
           </form>
         </div>
       </div>
@@ -46,15 +46,15 @@ Dashboard
             <li><a href="{{ url_for('graphs')}}">Analytics</a></li>
              <li><a href="{{ url_for('display')}}">Exploratory Data Analysis (EDA)</a></li>
               <li><a href="{{ url_for('visuval')}}">Heart Disease Deaths</a></li>
-            
+
           </ul>
           <ul class="nav nav-sidebar">
-           
+
             <li><a href="{{ url_for('detect') }}">Type of Heart Disease Detection</a></li>
             <li><a href="{{ url_for('concept') }}">Literature of Heart Disease</a></li>
             <li><a href="{{ url_for('sp') }}">Suggestions</a></li>
           </ul>
-         
+
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Welcome, {{ name }}</h1>
@@ -82,11 +82,11 @@ Dashboard
               <h4><a href="{{ url_for('display') }}">EDA</a></h4>
               <span class="text-muted">Exploratory Data Analysis (EDA)</span>
             </div>
-            
 
-             
+
+
             </center>
-           
+
           </div>
           <br>
           <br>
@@ -108,25 +108,25 @@ Dashboard
               <span class="text-muted">Different Concepts Of Heart Disease</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-              <a href="{{ url_for('sp') }}"><img src="https://lh3.googleusercontent.com/proxy/HwupLs9pV3jMRVE6DkyJn7QnUVhYxBcwae2nvRBwnsxPwvDu-2oUaXgB6xkdOGXMWPWy0bQV71YA5Vwd3qQeciwj4AvD1-5JcJ07wxao9z2jKsVHS_2kWOdKvhU" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
+              <a href="{{ url_for('sp') }}"><img src="https://lh3.googleusercontent.com/proxy/dvQ8HzPhLe4nqJ889lpGpFZ_OF_i65Kzl8xjYofGpJeqBXVCXP3YU9SrVjWmEzacfwCIjvuHGnhvZFgDlrps9_TXnudpL4TGmQCDOv4lkmugmdkUR67EOIa-tAY" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"></a>
               <h4><a href="{{ url_for('sp') }}">Suggestions</a></h4>
               <span class="text-muted">Suggestions & Precautions</span>
             </div>
-            
-          
-            
-            
+
+
+
+
             </center>
-           
+
           </div>
-          
-          
+
+
           <br>
           <br>
 
           <h2 class="sub-header">Top 5 Cardiology Hospitals Across Globe</h2>
           <br>
-          
+
           <div class="table-responsive">
             <table align="center" class="table table-striped">
               <thead>
@@ -174,7 +174,7 @@ Dashboard
                   <td>Boston</td>
                   <td><a href="https://www.massgeneral.org/medicine/cardiology">Click Here</a></td>
                 </tr>
-                
+
               </tbody>
             </table>
           </div>
