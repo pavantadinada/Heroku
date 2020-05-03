@@ -144,41 +144,41 @@ def display():
 def visuval():
     return render_template('visuval.html')
 
-@app.route('/world_viz/', methods=['GET'])
-def world_viz():
-    df = pd.read_csv('death.csv')
-    fig = go.Figure(data=go.Choropleth(
-    locations = df['CODE'],
-    z = df['DEATHS (THOUSANDS)'],
-    text = df['COUNTRY'],
-    colorscale = 'Blues',
-    autocolorscale=False,
-    reversescale=True,
-    marker_line_color='darkgray',
-    marker_line_width=0.5,
-    colorbar_tickprefix = '',
-    colorbar_title = 'DEATHS<br>THOUSANDS',))
+#@app.route('/world_viz/', methods=['GET'])
+#def world_viz():
+    #df = pd.read_csv('death.csv')
+    #fig = go.Figure(data=go.Choropleth(
+    #locations = df['CODE'],
+    #z = df['DEATHS (THOUSANDS)'],
+    #text = df['COUNTRY'],
+    #colorscale = 'Blues',
+    #autocolorscale=False,
+    #reversescale=True,
+    #marker_line_color='darkgray',
+    #marker_line_width=0.5,
+    #colorbar_tickprefix = '',
+    #colorbar_title = 'DEATHS<br>THOUSANDS',))
 
-    fig.update_layout(
-    title_text='WORLD HEART FAILURE DEATHS',
-    geo=dict(
-        showframe=False,
-        showcoastlines=False,
-        projection_type='equirectangular'
-    ),
-    annotations = [dict(
-        x=0.5,
-        y=0.1,
-        xref='paper',
-        yref='paper',
-        text='Deaths in Thousands',
-        showarrow = False
-    )]
-    )
+    #fig.update_layout(
+    #title_text='WORLD HEART FAILURE DEATHS',
+    #geo=dict(
+        #showframe=False,
+        #showcoastlines=False,
+        #projection_type='equirectangular'
+    #),
+    #annotations = [dict(
+        #x=0.5,
+        #y=0.1,
+        #xref='paper',
+        #yref='paper',
+        #text='Deaths in Thousands',
+        #showarrow = False
+    #)]
+    #)
     
-    fig.show()
+    #fig.show()
 
-    return render_template('visuval.html')
+    #return render_template('visuval.html')
 
 
 @app.route('/aboutus')
