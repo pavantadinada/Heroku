@@ -22,7 +22,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 suggestmodel = pickle.load(open('suggestmodel.pkl', 'rb'))
 #file_path = os.path.abspath(os.getcwd())+"\database.db"
 #DATABASE_URL = sqlite:////Users/tadinadasatyasaikrishnapavan/Documents/FirstTrailPracticum/database.db
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/tadinadasatyasaikrishnapavan/Documents/FirstTrailPracticum/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'password'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
