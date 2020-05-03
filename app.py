@@ -138,9 +138,7 @@ def display():
     return render_template('display.html')
 
 
-@app.route('/world')
-def visuval():
-    return render_template('world.html')
+
 
 @app.route('/visuval')
 def visuval():
