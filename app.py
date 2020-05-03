@@ -12,15 +12,21 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+import psycopg2
 
 
 
 app = Flask(__name__, template_folder='templates')
 model = pickle.load(open('model.pkl', 'rb'))
 suggestmodel = pickle.load(open('suggestmodel.pkl', 'rb'))
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SECRET_KEY'] = 'password'
+#file_path = os.path.abspath(os.getcwd())+"\database.db"
+#DATABASE_URL = sqlite:////Users/tadinadasatyasaikrishnapavan/Documents/FirstTrailPracticum/database.db
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/tadinadasatyasaikrishnapavan/Documents/FirstTrailPracticum/database.db'
+app.config['SECRET_KEY'] = 'password'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
