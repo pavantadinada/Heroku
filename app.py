@@ -144,7 +144,7 @@ def display():
 def visuval():
     return render_template('visuval.html')
 
-@app.route('/world_viz')
+@app.route('/world_viz/', method=['GET'])
 def world_viz():
     df = pd.read_csv('death.csv')
     fig = go.Figure(data=go.Choropleth(
