@@ -178,7 +178,7 @@ def world_viz():
     
     #fig.show()
 
-    return render_template('visual.html', world_viz=fig.show())
+    return render_template('visuval.html', world_viz=fig.show())
 
 
 @app.route('/aboutus')
