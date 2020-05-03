@@ -138,7 +138,9 @@ def display():
     return render_template('display.html')
 
 
-
+@app.route('/world')
+def visuval():
+    return render_template('world.html')
 
 @app.route('/visuval')
 def visuval():
@@ -178,7 +180,7 @@ def world_viz():
     
     #fig.show()
 
-    return render_template('visuval.html', world_viz=fig.show())
+    return render_template('world.html', world_viz=fig.show())
 
 
 @app.route('/aboutus')
