@@ -15,6 +15,10 @@ ML API
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+th, td {
+  text-align: center;
+  padding: 2px;
+}
 * {
   box-sizing: border-box;
 }
@@ -139,7 +143,103 @@ input[type=submit]:hover {
  <div class="login">
 	<center><h1>Please fill the below form to know <br>the chance of getting Heart Disease</h1></center>
         <br>
+        <center><h2>Please refer the below table <br>for entering values in the form</h2></center>
         <br>
+        <div class="table-wrapper">
+            <table border="1" align="center" class="table-striped">
+              <thead>
+                <tr style="text-align: center;">
+                  <th>S.No</th>
+                  <th>Attribute Name</th>
+                  <th>Values Description</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Age</td>
+                  <td>Ranges from 1 to 100 </td>
+                  
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Sex</td>
+                  <td>For male - '1' & female - '0'</td>
+                  
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Chest Pain</td>
+                  <td>Chest Pain types - '0', '1', '2', '3'</td>
+                  
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Resting Blood Pressure</td>
+                  <td>Ranges between '94' and '200'</td>
+                  
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Serum Cholestral</td>
+                  <td>Ranges between '100' and '600'</td>
+                  
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Fasting Blood Sugar</td>
+                  <td>If the patient has more than<br>
+                    120mg/dl sugar = 1, if not = 0</td>
+                  
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Resting ECG</td>
+                  <td>Resting ECG types - '0', '1', '2'</td>
+                  
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Maximum Heart Rate</td>
+                  <td>Ranges between '71' and '202'</td>
+                  
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Exercise Induced Angina</td>
+                  <td>Exercise Induced Angina types - '0', '1'</td>
+                  
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Depression</td>
+                  <td>Ranges between '0' and '6.2' (Decimal values allowed)</td>
+                  
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Peak Exercise</td>
+                  <td>Peak Exercise types - '1', '2', '3'</td>
+                  
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Number of Vessels</td>
+                  <td>Number of Vessels colored - '0', '1', '2', '3'</td>
+                  
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Defect</td>
+                  <td>Defect type - '0', '1', '2', '3'</td>
+                  
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          <br>
+          <br>
      <!-- Main Input For Receiving Query to our ML -->
      <div class="container">
      <center>
