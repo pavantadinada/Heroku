@@ -77,7 +77,7 @@ def login():
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('dashboard'))
 
-        return '<center><h1>Invalid username or password</h1></center>'
+        return redirect(url_for('loginerrmsg'))
        
     return render_template('login.html', form=form)
 
@@ -92,10 +92,19 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        return '<center><h1>New user has been created!</h1></center>'
+        return redirect(url_for('signupmsg'))
         
 
     return render_template('signup.html', form=form)
+
+@app.route('/loginerrmsg')
+def loginerrmsg():
+    return render_template('loginerrmsg.html')
+
+
+@app.route('/signupmsg')
+def signupmsg():
+    return render_template('signupmsg.html')
 
 # Function to display Dashboard
 @app.route('/dashboard')
