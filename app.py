@@ -97,11 +97,12 @@ def signup():
 
     return render_template('signup.html', form=form)
 
+# Function to Display Login Error Message
 @app.route('/loginerrmsg')
 def loginerrmsg():
     return render_template('loginerrmsg.html')
 
-
+# Function to Display SignUp Successful Message
 @app.route('/signupmsg')
 def signupmsg():
     return render_template('signupmsg.html')
