@@ -111,10 +111,14 @@ def signupmsg():
 @app.route('/dashboard')
 @login_required
 def dashboard():
+    #if g.user:
+        #return render_template('dashboard.html', user=session('user'))
+    #name=current_user.username
     return render_template('dashboard.html', name=current_user.username)
 
 # Function to display Dataset
 @app.route('/dataset')
+@login_required
 def dataset():
     a = pd.read_csv("heart.csv") 
     a.to_html("Table.html") 
@@ -122,6 +126,7 @@ def dataset():
 
 # Function to display Prediction
 @app.route('/userinput')
+@login_required
 def userinput():
     return render_template('userinput.html')
 
@@ -144,21 +149,25 @@ def predict():
 
 # Function to display Analytics
 @app.route('/graphs')
+@login_required
 def graphs():
     return render_template('graphs.html')
 
 # Function to display EDA
 @app.route('/display')
+@login_required
 def display():
     return render_template('display.html')
 
 # Function to display No.of Humans beings deaths across the globe due to heart failures
 @app.route('/visuval')
+@login_required
 def visuval():
     return render_template('visuval.html')
 
 # Function to display Detection of type of Heart disease
 @app.route('/detect')
+@login_required
 def detect():
     return render_template('detect.html')
 
@@ -186,41 +195,49 @@ def detection():
 
 # Function to display Literature of Heart disease
 @app.route('/concept')
+@login_required
 def concept():
     return render_template('concept.html')
 
 # Function to display Working of Heart
 @app.route('/woh')
+@login_required
 def woh():
     return render_template('woh.html')
 
 # Function to display Symptoms of Heart disease
 @app.route('/symptoms')
+@login_required
 def symptoms():
     return render_template('symptoms.html')
 
 # Function to display Causes of Heart disease
 @app.route('/cause')
+@login_required
 def cause():
     return render_template('cause.html')
 
 # Function to display Risk Factors and Complications of Heart Disease
 @app.route('/rfc')
+@login_required
 def rfc():
     return render_template('rfc.html')
 
 # Function to display Precautions
 @app.route('/pre')
+@login_required
 def pre():
     return render_template('pre.html')
 
 # Function to display Suggestions
 @app.route('/sp')
+@login_required
 def sp():
     return render_template('sp.html')
 
 # Function to display About Us
 @app.route('/aboutus')
+@login_required
 def aboutus():
     return render_template('aboutus.html')
 
